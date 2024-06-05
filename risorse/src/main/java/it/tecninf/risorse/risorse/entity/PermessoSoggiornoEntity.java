@@ -11,8 +11,8 @@ import java.time.LocalDate;
 public class PermessoSoggiornoEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String id;
 
     @Column
     private String tipo;

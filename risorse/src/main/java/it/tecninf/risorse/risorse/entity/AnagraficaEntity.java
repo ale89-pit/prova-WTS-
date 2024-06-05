@@ -11,7 +11,7 @@ import java.time.LocalDate;
 public class AnagraficaEntity {
 
     @Id
-    private Long id;
+    private String id;
 
     @Column
     private String nome;

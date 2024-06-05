@@ -12,8 +12,8 @@ import java.time.LocalDate;
 public class ContrattoEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String id;
 
     @Column
     private String tipoContratto;

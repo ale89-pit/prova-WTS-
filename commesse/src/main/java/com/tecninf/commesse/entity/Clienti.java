@@ -17,27 +17,27 @@ public class Clienti {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    String id;
+    private String id;
 
     @Column(length = 100)
-    String nome;
+    private String nome;
 
     @Column
     @Email(regexp = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$")
-    String email;
+    private String email;
 
     @Column(name = "ragione_sociale")
     @Enumerated(EnumType.STRING)
-    RagioneSociale ragioneSociale;
+    private RagioneSociale ragioneSociale;
 
     @Column(name = "partita_iva",unique = true,length = 11)
-    String partitaIva;
+    private String partitaIva;
 
     @Column(name = "indirizzo")
-    String indirizzo;
+    private String indirizzo;
 
     @Column
-    String telefono;
+    private String telefono;
 
     //sdi
 }
