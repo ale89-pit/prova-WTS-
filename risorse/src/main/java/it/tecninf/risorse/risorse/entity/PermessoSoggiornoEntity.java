@@ -1,4 +1,4 @@
-package it.tecninf.risorse.entity;
+package it.tecninf.risorse.risorse.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;

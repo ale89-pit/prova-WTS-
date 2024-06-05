@@ -1,6 +1,6 @@
-package it.tecninf.risorse.entity;
+package it.tecninf.risorse.risorse.entity;
 
-import it.tecninf.risorse.utility.EOrario;
+import it.tecninf.risorse.risorse.utility.EOrario;
 import jakarta.persistence.*;
 import lombok.Data;
 

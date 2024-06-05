@@ -1,4 +1,4 @@
-package it.tecninf.risorse.utility;
+package it.tecninf.risorse.risorse.utility;
 
 public enum EOrario {
     FULL_TIME,

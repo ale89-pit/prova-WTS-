@@ -1,4 +1,4 @@
-package it.tecninf.risorse.entity;
+package it.tecninf.risorse.risorse.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -12,6 +12,12 @@ public class AnagraficaEntity {
 
     @Id
     private Long id;
+
+    @Column
+    private String nome;
+    
+    @Column
+    private String cognome;
 
     @Column
     private String codiceFiscale;
