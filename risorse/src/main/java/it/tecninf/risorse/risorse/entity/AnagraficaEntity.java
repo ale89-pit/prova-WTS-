@@ -38,6 +38,9 @@ public class AnagraficaEntity {
     private String emailPrivata;
 
     @Column
+    private String emailAziendale;
+
+    @Column
     private String istruzione;
 
     @Column
