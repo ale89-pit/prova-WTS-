@@ -46,7 +46,7 @@ public class AnagraficaEntity {
 
     @Column
     @OneToOne(fetch = FetchType.LAZY)
-    private PermessoSoggiornoEntity contratto;
+    private PermessoSoggiornoEntity permessoSoggiorno;
 
     @Column
     private String genere;
@@ -56,6 +56,10 @@ public class AnagraficaEntity {
 
     @Column
     private LocalDate visiteMedica;
+
+    @Column
+    @OneToOne(fetch = FetchType.LAZY)
+    private ContrattoEntity contratto;
 
     @Column
     private String sceltaTFR;
