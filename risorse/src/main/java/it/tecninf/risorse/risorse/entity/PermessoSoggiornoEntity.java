@@ -15,7 +15,7 @@ public class PermessoSoggiornoEntity {
     private String id;
 
     @Column
-    private String tipo;
+    private String nazionalita;
 
     @Column
     private LocalDate scadenza;

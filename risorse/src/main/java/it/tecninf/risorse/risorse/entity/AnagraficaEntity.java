@@ -1,5 +1,6 @@
 package it.tecninf.risorse.risorse.entity;
 
+import it.tecninf.risorse.risorse.utility.EGender;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -43,16 +44,17 @@ public class AnagraficaEntity {
     @Column
     private String istruzione;
 
-    @Column
+    @PrimaryKeyJoinColumn
     @OneToOne(fetch = FetchType.LAZY)
     private DocumentoEntity documento;
 
-    @Column
+    @PrimaryKeyJoinColumn
     @OneToOne(fetch = FetchType.LAZY)
     private PermessoSoggiornoEntity permessoSoggiorno;
 
     @Column
-    private String genere;
+    @Enumerated(EnumType.STRING)
+    private EGender genere;
 
     @Column
     private String formazione;
@@ -60,7 +62,7 @@ public class AnagraficaEntity {
     @Column
     private LocalDate visiteMedica;
 
-    @Column
+    @PrimaryKeyJoinColumn
     @OneToOne(fetch = FetchType.LAZY)
     private ContrattoEntity contratto;
 

@@ -22,9 +22,13 @@ public class ContrattoEntity {
     private String tipologia;
 
     @Column
-    private LocalDate scadenza;
+    private LocalDate dataInizioContratto;
 
     @Column
+    private LocalDate dataScadenzaContratto;
+
+    @Column
+    @Enumerated(EnumType.STRING)
     private EOrario orario;
 
     @Column

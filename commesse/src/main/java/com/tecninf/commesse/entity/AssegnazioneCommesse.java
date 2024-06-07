@@ -31,9 +31,10 @@ public class AssegnazioneCommesse {
     @Column
     private LocalDate dataFineCommessaDipendente;
 
-    @ManyToOne
-    @JoinColumn(name = "dipendente_id", nullable = false)
-    private Dipendenti dipendente;
+//    @ManyToOne
+//    @JoinColumn(name = "dipendente_id", nullable = false)
+    @Column
+    private String idDipendente;
 
     //Aggiungere centro di costo
 

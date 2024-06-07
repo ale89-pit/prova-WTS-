@@ -2,11 +2,7 @@ package it.pit.security.authservice.security.payload;
 
 import lombok.*;
 
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
+@Data
 public class LoginDto {
     private String username;
     private String password;

@@ -21,7 +21,6 @@ public class GatewayConfig {
                         .uri("http://localhost:8081"))
                 .route("commesse-service", r -> r.path("/api/commesse/**")
                         .filters(f->f.filter(filter))
-
                         .uri("http://localhost:8082"))
                 .build();
     }

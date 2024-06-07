@@ -37,9 +37,9 @@ public class Commessa {
     @Column
     private String responsabileProgetto;
 
-    @Column(name="skill_richieste")
-    @OneToMany
-    private List<Skill> skillRichieste;
+//    @Column(name="skill_richieste")
+//    @OneToMany
+//    private List<Skill> skillRichieste;
 
     @OneToMany(mappedBy = "commessa")
     @JsonIgnore

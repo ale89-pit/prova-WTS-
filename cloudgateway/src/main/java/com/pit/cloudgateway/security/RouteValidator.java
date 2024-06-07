@@ -16,4 +16,5 @@ public class RouteValidator {
             request -> openApiEndpoits
                     .stream()
                     .noneMatch(uri -> request.getURI().getPath().contains(uri));
+
 }

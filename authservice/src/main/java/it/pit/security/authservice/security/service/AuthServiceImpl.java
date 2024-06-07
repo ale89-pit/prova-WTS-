@@ -39,7 +39,7 @@ public class AuthServiceImpl implements AuthService {
     private PasswordEncoder passwordEncoder;
     private JwtTokenProvider jwtTokenProvider;
     @Autowired private ConfirmationTokenRepository confirmationTokenRepository;
-    @Autowired private EmailService emailService;
+//    @Autowired private EmailService emailService;
 
 
     public AuthServiceImpl(AuthenticationManager authenticationManager,
@@ -56,7 +56,6 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public String login(LoginDto loginDto) {
-        
     	Authentication authentication = authenticationManager.authenticate(
         		new UsernamePasswordAuthenticationToken(
         				loginDto.getUsername(), loginDto.getPassword()
@@ -105,18 +104,18 @@ public class AuthServiceImpl implements AuthService {
         System.out.println(user);
         userRepository.save(user);
      
-        ConfirmationToken confirmationToken = new ConfirmationToken(user);
-
-        confirmationTokenRepository.save(confirmationToken);
-        SimpleMailMessage mailMessage = new SimpleMailMessage();
-        mailMessage.setTo(user.getEmail());
-        mailMessage.setSubject("Complete Registration! This Email is valid to 24 Hours");
-        mailMessage.setText("To confirm your account, please click here : "
-                +"http://localhost:8081/api/auth/confirm-account?token="+confirmationToken.getConfirmationToken());
-        emailService.sendEmail(mailMessage);
-
-        System.out.println("Confirmation Token: " + confirmationToken.getConfirmationToken());
-        
+//        ConfirmationToken confirmationToken = new ConfirmationToken(user);
+//
+//        confirmationTokenRepository.save(confirmationToken);
+//        SimpleMailMessage mailMessage = new SimpleMailMessage();
+//        mailMessage.setTo(user.getEmail());
+//        mailMessage.setSubject("Complete Registration! This Email is valid to 24 Hours");
+//        mailMessage.setText("To confirm your account, please click here : "
+//                +"http://localhost:8081/api/auth/confirm-account?token="+confirmationToken.getConfirmationToken());
+//        emailService.sendEmail(mailMessage);
+//
+//        System.out.println("Confirmation Token: " + confirmationToken.getConfirmationToken());
+//
         return "Check your email to confirm.";
     }
     
